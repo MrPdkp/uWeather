@@ -8,6 +8,7 @@
       </div>
     </div>
     <div class="page-content">
+      <!-- Weather Card -->
       <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
           <h2>16</h2>
@@ -24,6 +25,7 @@
           <p class="weather-status">Raining</p>
         </div>
       </div>
+      <!-- Weather Card -->
       <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
           <h2>17</h2>
@@ -40,6 +42,7 @@
           <p class="weather-status">Raining</p>
         </div>
       </div>
+      <!-- Weather Card -->
       <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
           <h2>18</h2>
@@ -56,6 +59,7 @@
           <p class="weather-status">Raining</p>
         </div>
       </div>
+      <!-- Weather Card -->
       <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
           <h2>19</h2>
@@ -72,6 +76,7 @@
           <p class="weather-status">Raining</p>
         </div>
       </div>
+      <!-- Weather Card -->
       <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
           <h2>20</h2>
@@ -88,6 +93,7 @@
           <p class="weather-status">Raining</p>
         </div>
       </div>
+      <!-- Weather Card -->
       <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
           <h2>21</h2>

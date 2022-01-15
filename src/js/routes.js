@@ -1,7 +1,6 @@
 
 import HomePage from '../pages/home.f7';
 import WeekPage from '../pages/week.f7';
-import MonthPage from '../pages/month.f7';
 
 import DynamicRoutePage from '../pages/dynamic-route.f7';
 import RequestAndLoad from '../pages/request-and-load.f7';
@@ -16,11 +15,6 @@ var routes = [
     path: '/week/',
     component: WeekPage,
   },
-  {
-    path: '/month/',
-    component: MonthPage,
-  },
-
   {
     path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage,

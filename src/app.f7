@@ -15,11 +15,6 @@
             <i class="icon material-icons if-md">view_list</i>
             <span class="tabbar-label">Week</span>
           </a>
-          <!-- <a href="#view-month" class="tab-link">
-            <i class="icon f7-icons if-not-md">calendar</i>
-            <i class="icon material-icons if-md">calendar_month</i>
-            <span class="tabbar-label">Month</span>
-          </a> -->
         </div>
       </div>
 
@@ -33,10 +28,6 @@
         <!-- Week page will be loaded here dynamically from /week/ route -->
       </div>
 
-      <!-- Month View -->
-      <!-- <div id="view-month" class="view view-init tab" data-name="month" data-url="/month/"> -->
-        <!-- Month page will be loaded here dynamically from /settings/ route -->
-      <!-- </div> -->
     </div>
   </div>
 </template>

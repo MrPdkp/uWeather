@@ -15,11 +15,11 @@
           <div class="searchbar-inner">
             <div class="searchbar-input-wrap display-flex align-items-center">
               <!-- <i class="f7-icons">search</i> -->
-              <input type="search" placeholder="Touch Here To Search Cities" class="text-align-center"/>
+              <input type="search" placeholder="Touch Here To Search Cities" class="text-align-center" />
             </div>
           </div>
         </form>
-      </div>      
+      </div>
       <div class="block">
         <div class="row time-wdjt-home">
           <div class="col display-flex flex-direction-column align-items-center">

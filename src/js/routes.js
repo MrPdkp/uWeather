@@ -1,10 +1,7 @@
 
 import HomePage from '../pages/home.f7';
-import AboutPage from '../pages/about.f7';
-import FormPage from '../pages/form.f7';
-import CatalogPage from '../pages/catalog.f7';
-import ProductPage from '../pages/product.f7';
-import SettingsPage from '../pages/settings.f7';
+import WeekPage from '../pages/week.f7';
+import MonthPage from '../pages/month.f7';
 
 import DynamicRoutePage from '../pages/dynamic-route.f7';
 import RequestAndLoad from '../pages/request-and-load.f7';
@@ -16,24 +13,12 @@ var routes = [
     component: HomePage,
   },
   {
-    path: '/about/',
-    component: AboutPage,
+    path: '/week/',
+    component: WeekPage,
   },
   {
-    path: '/form/',
-    component: FormPage,
-  },
-  {
-    path: '/catalog/',
-    component: CatalogPage,
-  },
-  {
-    path: '/product/:id/',
-    component: ProductPage,
-  },
-  {
-    path: '/settings/',
-    component: SettingsPage,
+    path: '/month/',
+    component: MonthPage,
   },
 
   {

@@ -1,97 +1,71 @@
 <template>
   <div class="page" data-name="home">
     <!-- Top Navbar -->
-    <div class="navbar navbar-large">
-      <div class="navbar-bg"></div>
-      <div class="navbar-inner">
-        <div class="left">
-          <a href="#" class="link icon-only panel-open" data-panel="left">
-            <i class="icon f7-icons if-not-md">menu</i>
-            <i class="icon material-icons if-md">menu</i>
-          </a>
-        </div>
-        <div class="title sliding">uWeather</div>
-        <div class="right">
-          <a href="#" class="link icon-only panel-open" data-panel="right">
-            <i class="icon f7-icons if-not-md">menu</i>
-            <i class="icon material-icons if-md">menu</i>
-          </a>
-        </div>
-        <div class="title-large">
-          <div class="title-large-text">uWeather</div>
-        </div>
+    <div class="navbar">
+      <div class=""></div>
+      <div class="navbar-inner display-flex justify-content-center">
+        <div class="title">uWeather</div>
       </div>
     </div>
 
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="block block-strong">
-        <p>This is an example of tabs-layout application. The main point of such tabbed layout is that each tab contains independent view with its own routing and navigation.</p>
-
-        <p>Each tab/view may have different layout, different navbar type (dynamic, fixed or static) or without navbar like this tab.</p>
-      </div>
-      <div class="block-title">Navigation</div>
-      <div class="list">
-        <ul>
-          <li>
-            <a href="/about/" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">About</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="/form/" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Form</div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="block-title">Modals</div>
-      <div class="block block-strong">
-        <div class="row">
-          <div class="col-50">
-            <a href="#" class="button button-raised button-fill popup-open" data-popup="#my-popup">Popup</a>
+      <div class="block">
+        <form class="searchbar">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap display-flex align-items-center">
+              <!-- <i class="f7-icons">search</i> -->
+              <input type="search" placeholder="Touch Here To Search Cities" class="text-align-center"/>
+            </div>
           </div>
-          <div class="col-50">
-            <a href="#" class="button button-raised button-fill login-screen-open" data-login-screen="#my-login-screen">Login Screen</a>
+        </form>
+      </div>      
+      <div class="block">
+        <div class="row time-wdjt-home">
+          <div class="col display-flex flex-direction-column align-items-center">
+            <h2 class="location-name">Negombo, Sri Lanka</h2>
+            <h1 id="time">15:00</h1>
+            <h2 id="date">Monday, 16 Dec</h2>
           </div>
         </div>
       </div>
-
-      <div class="block-title">Panels</div>
-      <div class="block block-strong">
-        <div class="row">
-          <div class="col-50">
-            <a href="#" class="button button-raised button-fill panel-open" data-panel="left">Left Panel</a>
+      <div class="block">
+        <div class="row weather-wdjt-home display-flex align-items-center justify-content-center card">
+          <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+            <img data-src="../assets/images/10d@4x.png" width="120" height="auto" class="lazy" />
           </div>
-          <div class="col-50">
-            <a href="#" class="button button-raised button-fill panel-open" data-panel="right">Right Panel</a>
+          <div class="display-flex flex-direction-column">
+            <div class="display-flex">
+              <h1>20</h1>
+              <p><sup>o</sup>C</p>
+            </div>
+            <p class="weather-status">Raining</p>
           </div>
         </div>
-      </div>
-
-      <div class="list links-list">
-        <ul>
-          <li>
-            <a href="/dynamic-route/blog/45/post/125/?foo=bar#about">Dynamic (Component) Route</a>
-          </li>
-          <li>
-            <a href="/load-something-that-doesnt-exist/">Default Route (404)</a>
-          </li>
-          <li>
-            <a href="/request-and-load/user/123456/">Request Data & Load</a>
-          </li>
-        </ul>
+        <div class="card weather-specs">
+          <div class="row">
+            <div>
+              <h3>Humidity</h3>
+              <h3>Pressure</h3>
+              <h3>Wind Speed</h3>
+              <h3>Sunrise</h3>
+              <h3>Sunset</h3>
+            </div>
+            <div class="text-align-right">
+              <h3>80%</h3>
+              <h3>1001</h3>
+              <h3>2.06</h3>
+              <h3>06:00</h3>
+              <h3>17:45</h3>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default () => {
-  return $render;
-}
+  export default () => {
+    return $render;
+  }
 </script>

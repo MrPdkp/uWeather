@@ -1,0 +1,18 @@
+<template>
+  <div class="page" data-name="month">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class=""></div>
+      <div class="navbar-inner display-flex justify-content-center">
+        <div class="title">uWeather</div>
+      </div>
+    </div>
+    <div class="page-content">
+    </div>
+  </div>
+</template>
+<script>
+  export default () => {
+    return $render;
+  };
+</script>

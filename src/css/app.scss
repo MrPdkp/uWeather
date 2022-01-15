@@ -1,1 +1,194 @@
 /* Your app custom styles here */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+span,
+a {
+  margin: 0 !important;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 300;
+  line-height: 74px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.title {
+  font-weight: 300 !important;
+  color: #1d3557;
+}
+
+.time-wdjt-home {
+  margin: 50px 0;
+
+  h1 {
+    color: #1d3557;
+  }
+
+  h2 {
+    color: #264653;
+  }
+}
+
+.weather-wdjt-home {
+  padding: 10px 25px;
+
+  .weather-icon {
+    margin-right: 25px;
+  }
+
+  .weather-status {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-size: 60px !important;
+    font-weight: 200 !important;
+    line-height: 64px !important;
+    color: #1d3557;
+  }
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    color: #264653;
+  }
+}
+
+.card {
+  border: 1px solid #ececec;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.weather-specs {
+  padding: 30px 40px;
+
+  h3 {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 30px;
+    color: #264653;
+  }
+}
+
+.searchbar {
+  // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05) !important;
+  border: 1px solid #ececec;
+  box-shadow: none !important;
+  background: none;
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05) !important;
+  }
+
+  input::placeholder {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 20px !important;
+    font-weight: 300 !important;
+    padding: 0px !important;
+    color: #264653;
+  }
+
+  i {
+    margin-left: 15px !important;
+    font-size: 22px;
+  }
+}
+
+.searchbar,
+.searchbar-inner,
+.searchbar-input-wrap,
+input {
+  border-radius: 10px !important;
+  background: none !important;
+  transition: 0.2s;
+
+  &:hover {
+    background: #fff !important;
+  }
+}
+
+.page-content {
+  background: hsla(216, 41%, 79%, 1);
+
+  background: linear-gradient(90deg, hsla(216, 41%, 79%, 1) 0%, hsla(186, 33%, 94%, 1) 100%);
+
+  background: -moz-linear-gradient(90deg, hsla(216, 41%, 79%, 1) 0%, hsla(186, 33%, 94%, 1) 100%);
+
+  background: -webkit-linear-gradient(90deg, hsla(216, 41%, 79%, 1) 0%, hsla(186, 33%, 94%, 1) 100%);
+}
+
+.location-name {
+  padding-bottom: 25px;
+}
+
+.weather-wdjt {
+  padding: 10px 25px;
+
+  .weather-icon {
+    margin-right: 25px;
+    margin-left: 25px;
+  }
+
+  .weather-status {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-size: 30px !important;
+    font-weight: 200 !important;
+    line-height: 34px !important;
+    color: #1d3557;
+  }
+
+  h2 {
+    font-size: 30px !important;
+    font-weight: 200 !important;
+    line-height: 34px !important;
+    color: #1d3557;
+  }
+
+  p {
+    font-size: 12px;
+    font-weight: 400;
+    color: #264653;
+  }
+
+  .day {
+    font-size: 12px;
+    font-weight: 400;
+    color: #264653;
+  }
+}
+
+.tl-bar {
+  background: rgb(179, 197, 223, 0.1) !important;
+}
+
+.toolbar-bottom:before, .toolbar-bottom::after{
+  background: rgb(179, 197, 223, 0.1) !important;
+}

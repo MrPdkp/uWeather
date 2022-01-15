@@ -1,0 +1,114 @@
+<template>
+  <div class="page" data-name="month">
+    <!-- Top Navbar -->
+    <div class="navbar">
+      <div class=""></div>
+      <div class="navbar-inner display-flex justify-content-center">
+        <div class="title">uWeather</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+          <h2>16</h2>
+          <p class="day">Mon</p>
+        </div>
+        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+        </div>
+        <div class="display-flex flex-direction-column">
+          <div class="display-flex">
+            <h1>20</h1>
+            <p><sup>o</sup>C</p>
+          </div>
+          <p class="weather-status">Raining</p>
+        </div>
+      </div>
+      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+          <h2>17</h2>
+          <p class="day">Tue</p>
+        </div>
+        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+        </div>
+        <div class="display-flex flex-direction-column">
+          <div class="display-flex">
+            <h1>20</h1>
+            <p><sup>o</sup>C</p>
+          </div>
+          <p class="weather-status">Raining</p>
+        </div>
+      </div>
+      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+          <h2>18</h2>
+          <p class="day">Wed</p>
+        </div>
+        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+        </div>
+        <div class="display-flex flex-direction-column">
+          <div class="display-flex">
+            <h1>20</h1>
+            <p><sup>o</sup>C</p>
+          </div>
+          <p class="weather-status">Raining</p>
+        </div>
+      </div>
+      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+          <h2>19</h2>
+          <p class="day">Thu</p>
+        </div>
+        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+        </div>
+        <div class="display-flex flex-direction-column">
+          <div class="display-flex">
+            <h1>20</h1>
+            <p><sup>o</sup>C</p>
+          </div>
+          <p class="weather-status">Raining</p>
+        </div>
+      </div>
+      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+          <h2>20</h2>
+          <p class="day">Fri</p>
+        </div>
+        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+        </div>
+        <div class="display-flex flex-direction-column">
+          <div class="display-flex">
+            <h1>20</h1>
+            <p><sup>o</sup>C</p>
+          </div>
+          <p class="weather-status">Raining</p>
+        </div>
+      </div>
+      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+          <h2>21</h2>
+          <p class="day">Sat</p>
+        </div>
+        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
+          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+        </div>
+        <div class="display-flex flex-direction-column">
+          <div class="display-flex">
+            <h1>20</h1>
+            <p><sup>o</sup>C</p>
+          </div>
+          <p class="weather-status">Raining</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+  export default () => {
+    return $render;
+  };
+</script>

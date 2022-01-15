@@ -1,0 +1,19 @@
+{
+  "cwd": "C:\\Users\\pramo\\Documents\\GitHub\\uWeather",
+  "type": [
+    "web"
+  ],
+  "name": "uWeather",
+  "framework": "core",
+  "template": "tabs",
+  "bundler": "vite",
+  "cssPreProcessor": "scss",
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": false,
+    "iconFonts": true,
+    "fillBars": false
+  },
+  "customBuild": false
+}

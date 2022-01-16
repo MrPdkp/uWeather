@@ -8,113 +8,76 @@
       </div>
     </div>
     <div class="page-content">
+      ${forcast.map((item) => $h`
       <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
+      <div class="row weather-wdjt display-flex align-items-center justify-content-between card">
         <div class="display-flex flex-direction-column align-items-center justify-content-center">
-          <h2>16</h2>
-          <p class="day">Mon</p>
+          <h2>${item.date}</h2>
+          <p class="day">${item.days}</p>
         </div>
         <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
+          <img data-src="http://openweathermap.org/img/wn/${item.icon}@4x.png" width="80" height="auto" class="lazy" />
         </div>
         <div class="display-flex flex-direction-column">
           <div class="display-flex">
-            <h1>20</h1>
+            <h1>${item.temp}</h1>
             <p><sup>o</sup>C</p>
           </div>
-          <p class="weather-status">Raining</p>
+          <p class="weather-status">${item.main}</p>
         </div>
-      </div>
-      <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
-        <div class="display-flex flex-direction-column align-items-center justify-content-center">
-          <h2>17</h2>
-          <p class="day">Tue</p>
-        </div>
-        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
-        </div>
-        <div class="display-flex flex-direction-column">
-          <div class="display-flex">
-            <h1>20</h1>
-            <p><sup>o</sup>C</p>
-          </div>
-          <p class="weather-status">Raining</p>
-        </div>
-      </div>
-      <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
-        <div class="display-flex flex-direction-column align-items-center justify-content-center">
-          <h2>18</h2>
-          <p class="day">Wed</p>
-        </div>
-        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
-        </div>
-        <div class="display-flex flex-direction-column">
-          <div class="display-flex">
-            <h1>20</h1>
-            <p><sup>o</sup>C</p>
-          </div>
-          <p class="weather-status">Raining</p>
-        </div>
-      </div>
-      <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
-        <div class="display-flex flex-direction-column align-items-center justify-content-center">
-          <h2>19</h2>
-          <p class="day">Thu</p>
-        </div>
-        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
-        </div>
-        <div class="display-flex flex-direction-column">
-          <div class="display-flex">
-            <h1>20</h1>
-            <p><sup>o</sup>C</p>
-          </div>
-          <p class="weather-status">Raining</p>
-        </div>
-      </div>
-      <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
-        <div class="display-flex flex-direction-column align-items-center justify-content-center">
-          <h2>20</h2>
-          <p class="day">Fri</p>
-        </div>
-        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
-        </div>
-        <div class="display-flex flex-direction-column">
-          <div class="display-flex">
-            <h1>20</h1>
-            <p><sup>o</sup>C</p>
-          </div>
-          <p class="weather-status">Raining</p>
-        </div>
-      </div>
-      <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-center card">
-        <div class="display-flex flex-direction-column align-items-center justify-content-center">
-          <h2>21</h2>
-          <p class="day">Sat</p>
-        </div>
-        <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-          <img data-src="../assets/images/10d@4x.png" width="80" height="auto" class="lazy" />
-        </div>
-        <div class="display-flex flex-direction-column">
-          <div class="display-flex">
-            <h1>20</h1>
-            <p><sup>o</sup>C</p>
-          </div>
-          <p class="weather-status">Raining</p>
-        </div>
-      </div>
+      </div>`)}
     </div>
   </div>
 </template>
 <script>
-  export default () => {
+  export default (props) => {
+    console.log(props);
+
+    const { daily } = props.weatherData;
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    let forcast = [];
+
+    console.log(daily);
+
+    for (let i = 0; i < daily.length; i++) {
+      var item = {};
+
+      //Assign Current Loop Item
+      const curnt = daily[i];
+
+      console.log(curnt);
+
+      let round_temp = curnt.temp.day;
+
+      item.temp = round_temp.toFixed();
+      item.main = curnt.weather[0].main;
+      item.icon = curnt.weather[0].icon;
+
+      //Get Today
+      const today = new Date();
+
+      if (i !== 0) {
+        today.setDate(today.getDate() + i);
+      }
+
+      const month = today.getMonth();
+      const date = today.getDate();
+      const day = today.getDay();
+      const hour = today.getHours();
+      const minutes = today.getMinutes();
+
+      //Assign Date To Forcast Array
+      item.days = days[day];
+      item.date = date;
+      item.months = months[month];
+
+      //Push Created Item To Array
+      forcast.push(item);
+    }
+
     return $render;
-  };
+  }
 </script>

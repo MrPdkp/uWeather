@@ -7,14 +7,12 @@
         <div class="title">uWeather</div>
       </div>
     </div>
-
     <!-- Scrollable page content-->
     <div class="page-content">
       <div class="block">
         <form class="searchbar">
           <div class="searchbar-inner">
             <div class="searchbar-input-wrap display-flex align-items-center">
-              <!-- <i class="f7-icons">search</i> -->
               <input type="search" placeholder="Touch Here To Search Cities" class="text-align-center" />
             </div>
           </div>
@@ -23,23 +21,24 @@
       <div class="block">
         <div class="row time-wdjt-home">
           <div class="col display-flex flex-direction-column align-items-center">
-            <h2 class="location-name">Negombo, Sri Lanka</h2>
-            <h1 id="time">15:00</h1>
-            <h2 id="date">Monday, 16 Dec</h2>
+            <h2 class="location-name">${weather_data.timezone}</h2>
+            <h1 id="time">${hour + ':' + (minutes < 10? '0' +minutes: minutes)}</h1>
+                <h2 id="date">${days[day] + ', ' + date+ ' ' + months[month]}</h2>
           </div>
         </div>
       </div>
       <div class="block">
         <div class="row weather-wdjt-home display-flex align-items-center justify-content-center card">
           <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
-            <img data-src="../assets/images/10d@4x.png" width="120" height="auto" class="lazy" />
+            <img data-src="http://openweathermap.org/img/wn/${weather_data.current.weather[0].icon}@4x.png" width="120"
+              height="auto" class="lazy" />
           </div>
           <div class="display-flex flex-direction-column">
             <div class="display-flex">
-              <h1>20</h1>
+              <h1>${temp}</h1>
               <p><sup>o</sup>C</p>
             </div>
-            <p class="weather-status">Raining</p>
+            <p class="weather-status">${weather_data.current.weather[0].main}</p>
           </div>
         </div>
         <div class="card weather-specs">
@@ -52,11 +51,11 @@
               <h3>Sunset</h3>
             </div>
             <div class="text-align-right">
-              <h3>80%</h3>
-              <h3>1001</h3>
-              <h3>2.06</h3>
-              <h3>06:00</h3>
-              <h3>17:45</h3>
+              <h3>${humidity}</h3>
+              <h3>${pressure}</h3>
+              <h3>${wind_speed}</h3>
+              <h3>${timezoneConvert(sunrise)}</h3>
+              <h3>${timezoneConvert(sunset)}</h3>
             </div>
           </div>
         </div>
@@ -65,7 +64,36 @@
   </div>
 </template>
 <script>
-  export default () => {
+  export function timezoneConvert(time_convert) {
+    var convert_time = new Date(time_convert * 1000);
+    var hour = convert_time.getHours();
+    var min = convert_time.getMinutes();
+    var time = hour + ':' + min;
+    return time;
+  }
+
+  export default (props) => {
+    console.log(props);
+    
+    const weather_data = props.weatherData;
+
+    let { humidity, pressure, sunrise, sunset, wind_speed } = weather_data.current;
+
+    let round_temp = weather_data.current.temp;
+    let temp = round_temp.toFixed();
+
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+    const time = new Date();
+    const month = time.getMonth();
+    const date = time.getDate();
+    const day = time.getDay();
+    const hour = time.getHours();
+    const minutes = time.getMinutes();
+
+    console.log(date);
+
     return $render;
   }
 </script>

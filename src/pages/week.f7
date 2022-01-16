@@ -10,15 +10,15 @@
     <div class="page-content">
       ${forcast.map((item) => $h`
       <!-- Weather Card -->
-      <div class="row weather-wdjt display-flex align-items-center justify-content-between card">
-        <div class="display-flex flex-direction-column align-items-center justify-content-center">
+      <div class="row weather-wdjt display-flex align-items-center justify-content-start card">
+        <div class="display-flex flex-direction-column align-items-center justify-content-center"  style="width: 40%;">
           <h2>${item.date}</h2>
           <p class="day">${item.days}</p>
         </div>
         <div class="display-flex justify-content-center flex-direction-column align-items-center weather-icon">
           <img data-src="http://openweathermap.org/img/wn/${item.icon}@4x.png" width="80" height="auto" class="lazy" />
         </div>
-        <div class="display-flex flex-direction-column">
+        <div class="display-flex flex-direction-column" style="margin-left: auto;">
           <div class="display-flex">
             <h1>${item.temp}</h1>
             <p><sup>o</sup>C</p>
